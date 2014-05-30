@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<view xmlns='http://labkey.org/data/xml/view' title='OpenCyto Quality Control'>
+    <dependencies>
+        <dependency path='Ext.ux.form.LovCombo.css'/>
+        <dependency path='OpenCyto/gridfilters/css/RangeMenu.css'/>
+        <dependency path='OpenCyto/gridfilters/css/GridFilters.css'/>
+        <dependency path='OpenCyto/OpenCyto.css'/>
+
+        <dependency path='Ext3'/>
+
+        <dependency path='Ext.ux.form.LovCombo.js'/>
+        <dependency path='OpenCyto/ExtendedComboBox.js'/>
+        <dependency path='OpenCyto/ExtendedLovCombo.js'/>
+        <dependency path='OpenCyto/gridfilters/menu/RangeMenu.js'/>
+        <dependency path='OpenCyto/gridfilters/menu/ListMenu.js'/>
+        <dependency path='OpenCyto/gridfilters/GridFilters.js'/>
+        <dependency path='OpenCyto/gridfilters/filter/Filter.js'/>
+        <dependency path='OpenCyto/gridfilters/filter/StringFilter.js'/>
+        <dependency path='OpenCyto/gridfilters/filter/DateFilter.js'/>
+        <dependency path='OpenCyto/gridfilters/filter/ListFilter.js'/>
+        <dependency path='OpenCyto/gridfilters/filter/NumericFilter.js'/>
+        <dependency path='OpenCyto/gridfilters/filter/BooleanFilter.js'/>
+        <dependency path='OpenCyto/GridPanelHeaderResize.js'/>
+        <dependency path='OpenCyto/CheckBoxMemory.js'/>
+        <dependency path='OpenCyto/MsgBus.js'/>
+        <dependency path='OpenCyto/OpenCyto.js'/>
+
+        <dependency path='OpenCytoQualityControl.js'/>
+    </dependencies>
+</view>

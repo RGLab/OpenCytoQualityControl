@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns:tables xmlns:ns='http://labkey.org/data/xml'>
+    <ns:table tableName='reports' tableDbType='TABLE'>
+        <ns:description>
+            The 'reports' table contains information about generated quality assurance runs/reports.
+        </ns:description>
+        <ns:columns>
+            <ns:column columnName='container'/>
+            <ns:column columnName='rowid'>
+                <ns:columnTitle>RowId</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='name'>
+                <ns:columnTitle>Name</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='description'>
+                <ns:columnTitle>Description</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='created'>
+                <ns:columnTitle>Created</ns:columnTitle>
+                <ns:formatString>yyyy-MM-dd HH:mm:ss</ns:formatString>
+            </ns:column>
+            <ns:column columnName='gsid'>
+                <ns:columnTitle>gsId</ns:columnTitle>
+            </ns:column>
+        </ns:columns>
+    </ns:table>
+    <ns:table tableName='qatasklist' tableDbType='TABLE'>
+        <ns:description>
+            The 'qaTaskList' table contains the sets of quality assurance tasks associated with reports.
+        </ns:description>
+        <ns:columns>
+            <ns:column columnName='container'/>
+            <ns:column columnName='rowid'>
+                <ns:columnTitle>RowId</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='qaid'>
+                <ns:columnTitle>qaID</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='qaname'>
+                <ns:columnTitle>qaName</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='description'>
+                <ns:columnTitle>description</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='qalevel'>
+                <ns:columnTitle>qaLevel</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='pop'>
+                <ns:columnTitle>pop</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='formula'>
+                <ns:columnTitle>formula</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='plottype'>
+                <ns:columnTitle>plotType</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='outlierfunc'>
+                <ns:columnTitle>outlierFunc</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='outlierfunc_args'>
+                <ns:columnTitle>outlierFunc_args</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='goutlierfunc'>
+                <ns:columnTitle>goutlierFunc</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='goutlierfunc_args'>
+                <ns:columnTitle>goutlierFunc_args</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='reportid'>
+                <ns:columnTitle>reportId</ns:columnTitle>
+            </ns:column>
+        </ns:columns>
+    </ns:table>
+    <ns:table tableName='stats' tableDbType='TABLE'>
+        <ns:description>
+            The 'stats' table contains the statistics extracted from the data associated with a referenced particular analysis.
+        </ns:description>
+        <ns:columns>
+            <ns:column columnName='container'>
+                <!--<ns:isDisplayColumn>false</ns:isDisplayColumn>-->
+                <ns:isHidden>true</ns:isHidden>
+            </ns:column>
+            <ns:column columnName='sid'>
+                <ns:columnTitle>sid</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='fileid'>
+                <ns:columnTitle>fileid</ns:columnTitle>
+                <ns:fk>
+                    <ns:fkDbSchema>flow</ns:fkDbSchema>
+                    <ns:fkTable>FCSFiles</ns:fkTable>
+                    <ns:fkColumnName>RowId</ns:fkColumnName>
+                </ns:fk>
+            </ns:column>
+            <ns:column columnName='gsid'>
+                <ns:columnTitle>gsid</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='population'>
+                <ns:columnTitle>population</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='stats'>
+                <ns:columnTitle>stats</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='node'>
+                <ns:columnTitle>node</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='channel'>
+                <ns:columnTitle>channel</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='value'>
+                <ns:columnTitle>value</ns:columnTitle>
+            </ns:column>
+        </ns:columns>
+    </ns:table>
+    <ns:table tableName='outlierresult' tableDbType='TABLE'>
+        <ns:description>
+            The 'outlierResult' table contains the individual outliers detected during the QA run.
+        </ns:description>
+        <ns:columns>
+            <ns:column columnName='container'/>
+            <ns:column columnName='sid'>
+                <ns:columnTitle>sid</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='qaid'>
+                <ns:columnTitle>qaID</ns:columnTitle>
+            </ns:column>
+        </ns:columns>
+    </ns:table>
+    <ns:table tableName='groupoutlierresult' tableDbType='TABLE'>
+        <ns:description>
+            The 'groupOutlierResult' table contains the group outliers detected during the QA run.
+        </ns:description>
+        <ns:columns>
+            <ns:column columnName='container'/>
+            <ns:column columnName='sid'>
+                <ns:columnTitle>sid</ns:columnTitle>
+            </ns:column>
+            <ns:column columnName='qaid'>
+                <ns:columnTitle>qaID</ns:columnTitle>
+            </ns:column>
+        </ns:columns>
+    </ns:table>
+</ns:tables>
